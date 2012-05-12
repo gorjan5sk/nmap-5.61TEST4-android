@@ -1,0 +1,11 @@
+--- configure	2011-12-19 06:16:20.000000000 +0100
++++ configure	2012-01-10 06:52:40.189167371 +0100
+@@ -4494,7 +4494,7 @@
+ 
+ needs_cpp_precomp=no
+ 
+-LUA_CFLAGS="-DLUA_USE_POSIX -DLUA_USE_DLOPEN"
++LUA_CFLAGS="-DLUA_USE_POSIX"
+ 
+ case "$host" in
+   *alpha-dec-osf*)

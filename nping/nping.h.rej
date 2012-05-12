@@ -1,0 +1,11 @@
+--- nping/nping.h	2011-02-15 22:10:13.502710541 +0100
++++ nping/nping.h	2011-02-15 22:14:35.934710551 +0100
+@@ -112,7 +112,7 @@
+     #endif /* WIN32 */
+ #endif /* HAVE_CONFIG_H */
+ 
+-#ifndef WIN32
++#ifndef __ANDROID__
+     #include <sysexits.h>
+ #endif
+ 

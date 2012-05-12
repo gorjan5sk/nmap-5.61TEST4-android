@@ -1,0 +1,114 @@
+pcre_exec.o: pcre_exec.c config.h pcre_internal.h \
+ /tmp/ndk/bin/../sysroot/usr/include/ctype.h \
+ /tmp/ndk/bin/../sysroot/usr/include/sys/cdefs.h \
+ /tmp/ndk/bin/../sysroot/usr/include/sys/cdefs_elf.h \
+ /tmp/ndk/bin/../sysroot/usr/include/android/api-level.h \
+ /tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/limits.h \
+ /tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/syslimits.h \
+ /tmp/ndk/bin/../sysroot/usr/include/limits.h \
+ /tmp/ndk/bin/../sysroot/usr/include/sys/limits.h \
+ /tmp/ndk/bin/../sysroot/usr/include/linux/limits.h \
+ /tmp/ndk/bin/../sysroot/usr/include/machine/internal_types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/machine/limits.h \
+ /tmp/ndk/bin/../sysroot/usr/include/sys/syslimits.h \
+ /tmp/ndk/bin/../sysroot/usr/include/setjmp.h \
+ /tmp/ndk/bin/../sysroot/usr/include/machine/setjmp.h \
+ /tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h \
+ /tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h \
+ /tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h \
+ /tmp/ndk/bin/../sysroot/usr/include/sys/_types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/machine/_types.h \
+ /tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/sys/types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/stdint.h \
+ /tmp/ndk/bin/../sysroot/usr/include/linux/posix_types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/linux/stddef.h \
+ /tmp/ndk/bin/../sysroot/usr/include/linux/compiler.h \
+ /tmp/ndk/bin/../sysroot/usr/include/asm/posix_types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/asm/types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/linux/types.h \
+ /tmp/ndk/bin/../sysroot/usr/include/machine/kernel.h \
+ /tmp/ndk/bin/../sysroot/usr/include/sys/sysmacros.h \
+ /tmp/ndk/bin/../sysroot/usr/include/stdlib.h \
+ /tmp/ndk/bin/../sysroot/usr/include/string.h \
+ /tmp/ndk/bin/../sysroot/usr/include/malloc.h \
+ /tmp/ndk/bin/../sysroot/usr/include/alloca.h \
+ /tmp/ndk/bin/../sysroot/usr/include/strings.h \
+ /tmp/ndk/bin/../sysroot/usr/include/memory.h pcre.h ucp.h
+
+config.h:
+
+pcre_internal.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/ctype.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/sys/cdefs.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/sys/cdefs_elf.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/android/api-level.h:
+
+/tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/limits.h:
+
+/tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/syslimits.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/limits.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/sys/limits.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/linux/limits.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/machine/internal_types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/machine/limits.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/sys/syslimits.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/setjmp.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/machine/setjmp.h:
+
+/tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stdarg.h:
+
+/tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include/stddef.h:
+
+/tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/stdio.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/sys/_types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/machine/_types.h:
+
+/tmp/ndk/bin/../lib/gcc/arm-linux-androideabi/4.4.3/include-fixed/sys/types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/stdint.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/linux/posix_types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/linux/stddef.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/linux/compiler.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/asm/posix_types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/asm/types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/linux/types.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/machine/kernel.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/sys/sysmacros.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/stdlib.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/string.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/malloc.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/alloca.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/strings.h:
+
+/tmp/ndk/bin/../sysroot/usr/include/memory.h:
+
+pcre.h:
+
+ucp.h:
