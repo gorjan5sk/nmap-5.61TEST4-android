@@ -24,7 +24,7 @@
 #
 
 # Top level hierarchy
-prefix = /sdcard/opt/nmap-5.61TEST4
+prefix = /sdcard/opt/nmap
 exec_prefix = ${prefix}
 datarootdir = ${prefix}/share
 # Pathname of directory to install the configure program

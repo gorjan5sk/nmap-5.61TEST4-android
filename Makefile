@@ -4,7 +4,7 @@ export NMAP_UPDATE_CHANNEL := $(shell grep '^\#[ \t]*define[ \t]\+NMAP_UPDATE_CH
 NMAP_NAME= Nmap
 NMAP_URL= http://nmap.org
 NMAP_PLATFORM=arm-unknown-linux-androideabi
-prefix = /sdcard/opt/nmap-5.61TEST4
+prefix = /sdcard/opt/nmap
 exec_prefix = ${prefix}
 bindir = ${exec_prefix}/bin
 sbindir = ${exec_prefix}/sbin
@@ -45,15 +45,15 @@ DEFS += -D_FORTIFY_SOURCE=2
 # Should only be enabled during debugging and not in any real release.
 # DEFS += -DMTRACE=1
 CXXFLAGS = -g -O2 -Wall -fno-strict-aliasing $(DBGFLAGS) $(CCOPT)
-CPPFLAGS = -I$(top_srcdir)/liblinear -I$(top_srcdir)/liblua -I$(top_srcdir)/libdnet-stripped/include -I$(top_srcdir)/libpcre -Iinternal/include  -I/home/mogi/nmap-cc/nmap-5.61TEST4/openssl/include -I$(top_srcdir)/libpcap -I$(top_srcdir)/nbase -I$(top_srcdir)/nsock/include $(DEFS)
+CPPFLAGS = -I$(top_srcdir)/liblinear -I$(top_srcdir)/liblua -I$(top_srcdir)/libdnet-stripped/include -I$(top_srcdir)/libpcre -Iinternal/include  -I/home/mogi/nmap/openssl/include -I$(top_srcdir)/libpcap -I$(top_srcdir)/nbase -I$(top_srcdir)/nsock/include $(DEFS)
 export CFLAGS = $(CXXFLAGS)
 # CFLAGS = $(DEFS) $(INCLS)
 STATIC =
-LDFLAGS = -Wl,-E -static -L/home/mogi/nmap-cc/nmap-5.61TEST4/openssl/lib -Lnbase -Lnsock/src/ $(DBGFLAGS) $(STATIC)
-LIBS =  -lnbase -lnsock libpcre/libpcre.a $(LIBPCAPDIR)/libpcap.a $(OPENSSL_LIBS) libnetutil/libnetutil.a $(top_srcdir)/libdnet-stripped/src/.libs/libdnet.a $(top_srcdir)/liblua/liblua.a $(top_srcdir)/liblinear/liblinear.a 
+LDFLAGS = -Wl,-E -static -L/home/mogi/nmap/openssl/lib -Lnbase -Lnsock/src/ $(DBGFLAGS) $(STATIC)
+LIBS =  -lnbase -lnsock libpcre/libpcre.a $(LIBPCAPDIR)/libpcap.a $(OPENSSL_LIBS) libnetutil/libnetutil.a $(top_srcdir)/libdnet-stripped/src/.libs/libdnet.a $(top_srcdir)/liblua/liblua.a $(top_srcdir)/liblinear/liblinear.a -ldl 
 OPENSSL_LIBS = -lssl -lcrypto
-# LIBS =  -lefence 
-# LIBS =  -lrmalloc 
+# LIBS =  -lefence -ldl 
+# LIBS =  -lrmalloc -ldl 
 INSTALL = /usr/bin/install -c
 # MAKEDEPEND = @MAKEDEPEND@
 export RPMTDIR=$(HOME)/rpm

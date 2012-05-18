@@ -1,5 +1,5 @@
 NSOCK_VERSION = 0.02
-prefix = /sdcard/opt/nmap-5.61TEST4
+prefix = /sdcard/opt/nmap
 exec_prefix = ${prefix}
 bindir = ${exec_prefix}/bin
 sbindir = ${exec_prefix}/sbin
@@ -17,7 +17,7 @@ DEFS += -D_FORTIFY_SOURCE=2
 INCLS = -I../include -I../../libpcap
 CFLAGS = -g -O2 -Wall  $(CCOPT)
 # CFLAGS = -g -Wall $(DEFS) $(INCLS)
-CPPFLAGS =  -I/home/mogi/nmap-cc/nmap-5.61TEST4/openssl/include -I../../nbase $(DEFS) $(INCLS)
+CPPFLAGS =  -I/home/mogi/nmap/openssl/include -I../../nbase $(DEFS) $(INCLS)
 STATIC = 
 SHTOOL = ./shtool
 INSTALL = $(SHTOOL) install 

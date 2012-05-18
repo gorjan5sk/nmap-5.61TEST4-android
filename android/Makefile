@@ -2,11 +2,11 @@
 NDK=/home/mogi/android-ndk-r7b
 NDKDEST=/tmp/ndk
 NDKPLATFORM=android-5
-ANDROIDDEST=/sdcard/opt/nmap-5.61TEST4
+ANDROIDDEST=/sdcard/opt/nmap
 
 OPENSSLOPT=
 # uncomment if you want openssl support and you have compiled OpenSSL already
-OPENSSLOPT="--with-openssl=/home/mogi/nmap-cc/openssl-android"
+OPENSSLOPT="--with-openssl=/home/mogi/nmap/openssl"
 
 # only used for download and automatic extraction (getndk)
 TMPNDK=/tmp/ndk.tar.bz2

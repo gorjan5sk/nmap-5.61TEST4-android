@@ -240,7 +240,7 @@ sys_lib_search_path_spec="/tmp/ndk/lib/gcc/arm-linux-androideabi/4.4.3 /tmp/ndk/
 sys_lib_dlsearch_path_spec="/lib /usr/lib /usr/lib/libfakeroot /usr/lib32 /usr/lib/perl5/core_perl/CORE /usr/lib/xulrunner-12.0 "
 
 # Whether dlopen is supported.
-dlopen_support=no
+dlopen_support=yes
 
 # Whether dlopen of programs is supported.
 dlopen_self=unknown

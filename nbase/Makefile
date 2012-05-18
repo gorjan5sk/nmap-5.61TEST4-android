@@ -1,4 +1,4 @@
-prefix = /sdcard/opt/nmap-5.61TEST4
+prefix = /sdcard/opt/nmap
 exec_prefix = ${prefix}
 bindir = ${exec_prefix}/bin
 sbindir = ${exec_prefix}/sbin

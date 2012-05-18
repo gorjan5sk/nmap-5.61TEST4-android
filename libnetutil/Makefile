@@ -3,7 +3,7 @@ srcdir = .
 
 CXX = arm-linux-androideabi-g++
 CXXFLAGS = -g -O2 -Wall -fno-strict-aliasing
-CPPFLAGS = -I$(top_srcdir)/liblinear -I$(top_srcdir)/liblua -I$(top_srcdir)/libdnet-stripped/include -I$(top_srcdir)/libpcre -Iinternal/include  -I/home/mogi/nmap-cc/nmap-5.61TEST4/openssl/include -I$(top_srcdir)/libpcap -I$(top_srcdir)/nbase -I$(top_srcdir)/nsock/include $(DEFS)
+CPPFLAGS = -I$(top_srcdir)/liblinear -I$(top_srcdir)/liblua -I$(top_srcdir)/libdnet-stripped/include -I$(top_srcdir)/libpcre -Iinternal/include  -I/home/mogi/nmap/openssl/include -I$(top_srcdir)/libpcap -I$(top_srcdir)/nbase -I$(top_srcdir)/nsock/include $(DEFS)
 DEFS = -DHAVE_CONFIG_H
 DEFS += -D_FORTIFY_SOURCE=2
 AR = ar
