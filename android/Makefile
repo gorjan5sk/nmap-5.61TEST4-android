@@ -1,5 +1,6 @@
 # @author Gorjan Petrovski mogi57@gmail.com
 # Modified from the excellent script and patches of Vlatko Kosturjak - kost@linux.hr
+
 # edit line below if you have NDK to reflect the path where NDK is installed
 NDK=~/android-ndk-r8
 NDKDEST=/tmp/ndk
@@ -40,3 +41,9 @@ compile:
 clean: unpatch
 	rm -rf $(NDKDEST)
 
+pack: 
+	mkdir -p nmap/share/nmap
+	mkdir nmap/bin
+	cd .. && cp nmap android/nmap/bin
+	cd .. && cp -a nmap-mac-prefixes nmap-os-db nmap-payloads nmap-protocols nmap-rpc nmap-service-probes nmap-services nselib nse_main.lua scripts -t android/nmap/share/nmap
+	
