@@ -1,40 +1,32 @@
+# @author Gorjan Petrovski mogi57@gmail.com
+# Modified from the excellent script and patches of Vlatko Kosturjak - kost@linux.hr
 # edit line below if you have NDK to reflect the path where NDK is installed
-NDK=/home/mogi/android-ndk-r7b
+NDK=~/android-ndk-r8
 NDKDEST=/tmp/ndk
 NDKPLATFORM=android-5
 ANDROIDDEST=/sdcard/opt/nmap
 
 OPENSSLOPT=
 # uncomment if you want openssl support and you have compiled OpenSSL already
-OPENSSLOPT="--with-openssl=/home/mogi/nmap/openssl"
-
-# only used for download and automatic extraction (getndk)
-TMPNDK=/tmp/ndk.tar.bz2
-TMPDIREXTRACT=/tmp
+OPENSSLOPT="--with-openssl=$(CURDIR)/openssl"
 
 NDKCP=$(NDK)/build/tools/make-standalone-toolchain.sh --platform=$(NDKPLATFORM) --install-dir=$(NDKDEST)
-NDKURL="http://dl.google.com/android/ndk/android-ndk-r5b-linux-x86.tar.bz2"
 
-all: 
-	@echo "Type 'make doit' to automatically download Android NDK and build"
-	@echo "Type 'make havendk' to build automatically if you have NDK (edit Makefile!)"
+all: | checklibs cpndk patch build
+	@echo "Nmap for Android successfully built"
 
-doit: | getndk havendk
-	@echo "Type 'doit' successfuly built"
+#check whether the user has copied the libs
+checklibs: libssl.a libcrypto.a libdl.a
+	@echo "Libraries found!"
 
-getndk:
-	wget $(NDKURL) -O $(TMPNDK) && cd $(TMPDIREXTRACT) && tar xvjf $(TMPNDK) 
 cpndk:
-	$(NDKCP)	
+	$(NDKCP) && cp $(CURDIR)/*.a $(NDKDEST)/arm-linux-androideabi/lib
 
 patch:
 	-cd .. && patch -N -p1 < android/patches.diff
 
 unpatch:
 	-cd .. && patch -R -p1 < android/patches.diff
-
-havendk: | cpndk patch build
-	@echo "Type 'havendk' successfuly built"
 
 build: | configure compile
 	@echo "Type 'build' successfuly built"
@@ -47,3 +39,4 @@ compile:
 
 clean: unpatch
 	rm -rf $(NDKDEST)
+
