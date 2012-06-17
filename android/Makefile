@@ -5,7 +5,7 @@
 NDK=~/android-ndk-r8
 NDKDEST=/tmp/ndk
 NDKPLATFORM=android-5
-ANDROIDDEST=/sdcard/opt/nmap
+ANDROIDDEST=/data/local/nmap
 
 OPENSSLOPT=
 # uncomment if you want openssl support and you have compiled OpenSSL already
@@ -13,7 +13,7 @@ OPENSSLOPT="--with-openssl=$(CURDIR)/openssl"
 
 NDKCP=$(NDK)/build/tools/make-standalone-toolchain.sh --platform=$(NDKPLATFORM) --install-dir=$(NDKDEST)
 
-all: | checklibs cpndk patch build
+all: | checklibs cpndk patch build pack
 	@echo "Nmap for Android successfully built"
 
 #check whether the user has copied the libs
@@ -40,6 +40,7 @@ compile:
 
 clean: unpatch
 	rm -rf $(NDKDEST)
+	rm -rf nmap
 
 pack: 
 	mkdir -p nmap/share/nmap
